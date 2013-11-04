@@ -1,5 +1,4 @@
 #!/bin/bash
     	
-    git checkout stable
-        
+    git checkout stable        
     git pull origin master
