@@ -1,4 +1,4 @@
 #!/bin/bash
     git fetch
-    git checkout stables
+    git checkout Toolboxx/stable
 	
