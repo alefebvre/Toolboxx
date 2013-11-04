@@ -1,0 +1,24 @@
+env:
+  global:
+  - GH_OWNER: alefebvre
+  - GH_PROJECT_NAME: Toolboxx
+  
+language: php
+php:
+- 5.3
+- 5.4
+- 5.5
+before_script:
+- curl -s http://getcomposer.org/installer | php
+- php composer.phar install --prefer-source --no-interaction --dev
+script: phpunit 
+after_success:
+- export POST_BUILD=true
+- wget http://pear.phpunit.de/get/phploc.phar
+- php phploc.phar src/ > build/result/phploc.txt
+- wget https://github.com/downloads/apigen/apigen/ApiGen-2.8.0-standalone.zip --no-check-certificate
+- unzip ApiGen-2.8.0-standalone.zip
+- rm ApiGen-2.8.0-standalone.zip
+- php apigen/apigen.php --source Application --destination build/result/docs/
+- bash push_to_gh_pages.sh
+
