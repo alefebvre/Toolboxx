@@ -2,7 +2,7 @@ env:
   global:
   - GH_OWNER: alefebvre
   - GH_PROJECT_NAME: Toolboxx
-  
+  - secure: XbMX611OKh1R2YsNufG+08cFHNV9+2WCfmb4p/hY6xTQII6pY3CCEvTPsftLmwZel+/O4aD/BoGnz5ULkdS0WWwAW3If0YkOR+Dx1h+yfK2QIu84Spx/kVQRuJq6FL4UvLriO7BjKSDdqDpbI8KL5cxftGBZ17dT+gyMoI9tuJI=
 language: php
 php:
 - 5.3
@@ -11,7 +11,7 @@ php:
 before_script:
 - curl -s http://getcomposer.org/installer | php
 - php composer.phar install --prefer-source --no-interaction --dev
-script: phpunit 
+script: phpunit
 after_success:
 - export POST_BUILD=true
 - wget http://pear.phpunit.de/get/phploc.phar
@@ -21,4 +21,3 @@ after_success:
 - rm ApiGen-2.8.0-standalone.zip
 - php apigen/apigen.php --source Application --destination build/result/docs/
 - bash push_to_gh_pages.sh
-
