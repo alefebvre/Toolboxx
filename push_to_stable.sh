@@ -1,5 +1,4 @@
 #!/bin/bash
-    	
+    git fecth
     git checkout stables
 	
-    git pull origin master
