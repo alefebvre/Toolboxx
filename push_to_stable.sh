@@ -12,4 +12,4 @@
         cd repo
    git checkout stable
 	
-    git pull origin from master
+    git pull origin master
