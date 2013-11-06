@@ -13,8 +13,10 @@
         cd repo
 		
    git checkout stable
-    git pull origin master
+  
 	git add .
 	git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to stable"
     git push > /dev/null
     echo -e "Pushed to GitHub"
+	
+	  git pull origin master
