@@ -1,4 +1,5 @@
 #!/bin/bash
-    git fetch
-    git checkout stable
+    	
+    git checkout Toolboxx\stable
 	
+    git pull origin master
