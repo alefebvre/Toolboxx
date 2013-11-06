@@ -1,5 +1,5 @@
 #!/bin/bash
     	
-    git checkout Toolboxx/stable
+    git checkout master
 	
     git pull origin master
