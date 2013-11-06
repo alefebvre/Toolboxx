@@ -1,5 +1,5 @@
 #!/bin/bash
     	
-    git checkout master
+    git checkout stable
 	
-    git pull origin master
+    git pull 
