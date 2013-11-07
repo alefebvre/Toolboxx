@@ -1,12 +1,8 @@
 #!/bin/bash
 
 
-	# copy data we're interested in to other place
-		cp -Rv Application $HOME/Application
-        cp -Rv test $HOME/test
 
-  # go to home and setup git
-	cd $HOME
+
     git config --global user.email "aurelien.lefebvre@viacesi.fr"
 	git config --global user.name "Travis"
 	 git config --global push.default matching
@@ -18,16 +14,11 @@
 
         # go into repo and copy data
         cd repo
-	   # checkout stable
-	   git checkout  stable
-	   
-	     # copy stuff
-	  cp -Rv $HOME/Application Application/
-       cp -Rv $HOME/test test/
+
 	 
    
        # Pull, add, commit and push files
-   git pull
+   git pull origin master
 
 		git add .
         git commit -m "Travis Stable"
