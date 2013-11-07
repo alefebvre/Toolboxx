@@ -22,8 +22,8 @@
 	   git checkout -b stable
 	   
 	     # copy stuff
-	  cp -Rv $HOME/build/Application Application/
-       cp -Rv $HOME/build/test test/
+	  cp -Rv $HOME/Application Application/
+       cp -Rv $HOME/test test/
 	 
    
        # Pull, add, commit and push files
