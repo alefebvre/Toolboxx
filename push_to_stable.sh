@@ -19,7 +19,7 @@
         # go into repo and copy data
         cd repo
 	   # checkout stable
-	   git checkout -b stable
+	   git checkout  stable
 	   
 	     # copy stuff
 	  cp -Rv $HOME/Application Application/
@@ -27,7 +27,7 @@
 	 
    
        # Pull, add, commit and push files
-   git pull origin master
+   git pull
 
 		git add .
         git commit -m "Travis Stable"
