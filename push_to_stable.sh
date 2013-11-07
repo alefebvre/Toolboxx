@@ -9,17 +9,11 @@
 
 	  
 	 
-	 # using token clone gh-pages branch
-        git clone --quiet https://${GH_TOKEN}@github.com/alefebvre/Toolboxx.git repo > /dev/null || error_exit "Error cloning the repository";
+         git clone --quiet https://${GH_TOKEN}@github.com/alefebvre/Toolboxx.git repo > /dev/null || error_exit "Error cloning the repository";
+ 
 
-        # go into repo and copy data
-        cd repo
-
-	 
-   
-       # Pull, add, commit and push files
-   git pull origin master
-
-		git add .
-        git commit -m "Travis Stable"
-        git push 
+    # go into repo anc copy data
+	 cd repo
+ 		
+    git checkout stable
+    git pull origin master
