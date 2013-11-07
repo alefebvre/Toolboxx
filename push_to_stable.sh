@@ -17,5 +17,6 @@
  		
     git checkout stable
     git pull origin master
-	git commit -m "travis stable"
+	git add *
+	git commit -m "LOOOOOL"
 	git push
