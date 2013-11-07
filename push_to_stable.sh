@@ -16,7 +16,15 @@
 	 cd repo
  		
     git checkout stable
+	
     git pull origin master
+	
 	git add *
+<<<<<<< HEAD
 	git commit -m "Travis  $TRAVIS_BUILD_NUMBER pushed to stable "
+=======
+	
+	git commit -m "Travis $TRAVIS_BUILD_NUMBER pushed to stable"
+	
+>>>>>>> 72d5a8fca6a4002058e3043485c34d07f08038e9
 	git push
